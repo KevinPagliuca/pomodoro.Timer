@@ -1,0 +1,37 @@
+import styled from 'styled-components';
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem 2rem;
+`;
+
+export const Navigation = styled.nav`
+  display: flex;
+  gap: 0.5rem;
+
+  a {
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: ${({ theme }) => theme.colors['gray-100']};
+
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: all 0.15s;
+
+    &.active {
+      color: ${({ theme }) => theme.colors['green-500']};
+    }
+
+    &:hover {
+      border-bottom: 3px solid ${({ theme }) => theme.colors['green-300']};
+    }
+  }
+`;
